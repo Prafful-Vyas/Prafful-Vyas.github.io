@@ -1,0 +1,38 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main  # Run when pushing to main
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # or the version your project uses
+
+      - name: Install dependencies
+        working-directory: ./portfolio
+        run: npm ci
+
+      - name: Build project
+        working-directory: ./portfolio
+        run: npm run build
+
+      - name: Deploy to root
+        run: |
+          rm -rf ./!(portfolio|.github|README.md)
+          cp -r portfolio/dist/* .
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy site from portfolio subfolder" || echo "No changes to commit"
+          git push origin main
