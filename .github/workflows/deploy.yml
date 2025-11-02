@@ -29,6 +29,7 @@ jobs:
 
       - name: Deploy to root
         run: |
+          shopt -s extglob
           rm -rf ./!(portfolio|.github|README.md)
           cp -r portfolio/dist/* .
           git config user.name "github-actions[bot]"
