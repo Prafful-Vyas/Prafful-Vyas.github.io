@@ -9,8 +9,8 @@ export default function App() {
       <div class="flex flex-col justify-between items-center md:w-[600px] mx-auto gap-y-16 mt-10">
         <Header />
         <div class="flex flex-col justify-between gap-y-5 w-full">
-          <h2 class="font-bold text-[24px]">Projects</h2>
-          <div>
+          <h2 class="font-bold text-[24px] p-2">Projects</h2>
+          <div class="flex flex-col gap-4">
             {resumeData.map((section, index) => (
               <ResumeSection
                 key={index}

@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <>
-      <div class="flex flex-col justify-between gap-[44px]">
+      <div class="flex flex-col justify-between gap-[44px] p-5">
         <div>
           <img
             src="My_image.jpg"
