@@ -4,7 +4,7 @@ const ResumeSection = ({ subject, items = [], liveLink, githubLink }) => {
       <div class="flex flex-col justify-between gap-y-4">
         <h2 class="text-xl font-semibold">{subject}</h2>
 
-        <ul class="list-disc list-inside text-white">
+        <ul class="list-disc list-inside text-white space-y-4">
           {items.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -13,7 +13,7 @@ const ResumeSection = ({ subject, items = [], liveLink, githubLink }) => {
 
       <div class="flex gap-4">
         {liveLink ? (
-          <div class="w-full flex justify-center px-4 py-2 bg-[#4E4E4E]">
+          <div class="w-full flex justify-center gap-2 px-4 py-2 bg-[#4E4E4E]">
             <a
               href={liveLink}
               target="_blank"
@@ -28,13 +28,13 @@ const ResumeSection = ({ subject, items = [], liveLink, githubLink }) => {
               rel="noopener noreferrer"
               class="text-white"
             >
-              <img src="ArrowUpRight.png" />
+              <img src="ArrowUpRight.svg" />
             </a>
           </div>
         ) : null}
 
         {githubLink ? (
-          <div class="w-full flex justify-center px-4 py-2 bg-[#067402]">
+          <div class="w-full flex justify-center gap-2 px-4 py-2 bg-[#067402]">
             <a
               href={githubLink}
               target="_blank"
@@ -49,7 +49,7 @@ const ResumeSection = ({ subject, items = [], liveLink, githubLink }) => {
               rel="noopener noreferrer"
               class="text-white"
             >
-              <img src="ArrowUpRight.png" />
+              <img src="ArrowUpRight.svg" />
             </a>
           </div>
         ) : null}
