@@ -14,9 +14,9 @@ const resumeSections = [
   {
     subject: "Air Compressor Predictive Maintenance",
     items: [
-      "Developed a predictive maintenance model by using Neural Networks Classification which classifies Bearings Status (Okay or Noisy) based on different input features.",
-      "Used Standardization for Feature Scaling and Principal Component Analysis for feature selection.",
-      "Used SMOTE-TOMEK resampling to handle data imbalance and evaluated model using ROC curve.",
+      "Built an end-to-end predictive maintenance pipeline for industrial air compressors using sensor data (vibration, noise, temperature, and power) to enable early detection of bearing failures.",
+"Performed domain-driven feature engineering, including vibration magnitude analysis and windowed FFT-based frequency-domain features, to capture early degradation patterns before failure onset.",
+"Trained and evaluated time-aware classification models with emphasis on failure recall, achieving ~89% recall for impending bearing failures while minimizing false negatives.",
     ],
     githubLink: "https://github.com/Prafful-Vyas/Air-Compressor-predictive-maintenance-using-ML",
     // No liveLink — button will not be shown
