@@ -4,12 +4,12 @@ const resumeSections = [
   {
     subject: "Weather Data ETL Pipeline ",
     items: [
-      "Designed and deployed a containerized ETL pipeline using Apache Airflow and Astronomer CLI to ingest and process real-time data from Open-Meteo API.",
-      "Implemented dynamic task mapping and Python-native DAGs using Airflow's API for scalable and modular pipeline orchestration",
-      "Enabled local development with a full Airflow stack (Scheduler, Triggerer, WebUI) running in Docker containers, simulating production grade workflows.",
+      "Developed an end-to-end ETL pipeline for real-time weather data ingestion, processing, and storage using Python, DuckDB, and Parquet, handling multiple cities and daily partitions.",
+"Implemented Bronze → Silver → Gold layers, including data normalization, type casting, partitioned storage, and automated metadata tracking for incremental processing.",
+"Optimized pipeline performance with async HTTP requests to fetch weather data from external APIs and ensured robust error handling and full-refresh capabilities for reliable analytics.",
     ],
     // liveLink: "https://yourproject.live",
-    githubLink: "https://github.com/Prafful-Vyas/Weather-Data-ETL-Pipeline",
+    githubLink: "https://github.com/Prafful-Vyas/Weather-ETL-Pipeline",
   },
   {
     subject: "Air Compressor Predictive Maintenance",
