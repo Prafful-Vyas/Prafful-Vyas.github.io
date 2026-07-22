@@ -19,7 +19,7 @@ const resumeSections = [
       "Trained and evaluated time-aware classification models with emphasis on failure recall, achieving ~89% recall for impending bearing failures while minimizing false negatives.",
     ],
     githubLink:
-      "https://github.com/Prafful-Vyas/Air-Compressor-predictive-maintenance-using-ML",
+      "https://github.com/Prafful-Vyas/AirCompressor-PdM.git",
     // No liveLink — button will not be shown
   },
   {
